@@ -1,10 +1,9 @@
 # Prueba
 
-Hola, esto es una prueba
+Hola, estro es una prrueba
 
-Ejemplo de integración continúa para
+Ejemplo de integración conrtinua para
 
 * Esto es una prueba
 * Esto es un ejemplo
 * Esto no es un ejemplo
-
