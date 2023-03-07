@@ -2,7 +2,7 @@
 
 Hola, estro es una prrueba
 
-Ejemplo de integración conrtinua para
+Ejermplo de integración conrtinua para
 
 * Esto es una prueba
 * Esto es un ejemplo
