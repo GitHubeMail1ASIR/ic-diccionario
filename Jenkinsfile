@@ -1,22 +1,21 @@
 pipeline {
     agent {
         docker { image 'debian'
-        args '-u root:root'
-        }
+                    args '-u root'
+            }
     }
     stages {
         stage('Clone') {
             steps {
-                git branch:'master',url:'https://github.com/josedom24/ic-travis-diccionario.git'
+                git branch:'master', url:'https://github.com/GitHubeMail1ASIR/ic-diccionario.git'
             }
         }
         stage('Install') {
             steps {
-                sh 'apt-get update && apt-get install -y aspell-es ' 
+                sh 'apt update && apt install -y aspell-es'
             }
         }
-        stage('Test')
-        {
+        stage('Test') {
             steps {
                 sh '''
                 export LC_ALL=C.UTF-8
@@ -24,11 +23,4 @@ pipeline {
             }
         }
     }
-    post {
-         always {
-          mail to: 'josedom24@josedomingo.org',
-          subject: "Status of pipeline: ${currentBuild.fullDisplayName}",
-          body: "${env.BUILD_URL} has result ${currentBuild.result}"
-        }
-      }
 }
